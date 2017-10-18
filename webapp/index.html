@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_belize">
+		</script>
+		
+		<script>
+		function onSliderChange(oEvent) {
+	      alert("Verschoben von " + 
+	      oEvent.getSource().getId() +
+		  "Verschoben auf " + 
+	      oEvent.getSource().getValue() +
+	   " verschoben")} 		
+		
+		
+		var oSlider1 = new sap.m.Slider({
+		        change: onSliderChange 		
+	        	});
+	 	oSlider1.placeAt("content");
+		
+		var oSlider2 = new sap.m.Slider({
+		        change: onSliderChange 		
+	        	});
+		oSlider2.placeAt("content");
+		
+		var oButton = new sap.m.Button({
+		  tooltip:"Ganz schön schwer ", 
+	    	text:" Blödsinn", press: function()
+	    	(
+	     	alert("Button gedrückt"))
+		    });
+      	oButton.placeAt("content");
+		
+		var oButton2 = new sap.m.Button({
+		   tooltip:"Ganz schön leicht",
+		   text:"nicht Blödsinn"
+		   });
+      	oButton2.placeAt("content");
+		
+		</script>      	
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
