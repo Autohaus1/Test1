@@ -42,7 +42,10 @@ sap.ui.jsview("view.App", {
 
 		var oButton2 = new sap.m.Button({
 			tooltip: "Ganz schön leicht",
-			text: "nicht Blödsinn"
+			text: "nicht Blödsinn",
+			press: function() {
+				alert("Button gedrückt");
+			}
 		});
 
 		var oPage = new sap.m.Page({
