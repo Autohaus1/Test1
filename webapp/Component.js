@@ -34,7 +34,14 @@ sap.ui.define([
 			this.setModel(oModel, "dataModel"); // Model einbinden  dadurch Model in der App überall verfügbar
 
 
-           var oFlugkundenModel = new sap.ui.model.json.JSONModel("model/flugkunden.json");
+         /*  var oFlugkundenModel = new sap.ui.model.json.JSONModel("model/flugkunden.json");
+           this.setModel(oFlugkundenModel, "flugkundenModel"); */
+           
+           var oFlugkundenModel = new sap.ui.model.odata.v2.ODataModel("/sap/opu/odata/sap/ZGW_FLUGKUNDEN_002_SRV", 
+           {disableHeadRequestForToken: true,
+           useBatch: false
+           	
+           });
            this.setModel(oFlugkundenModel, "flugkundenModel"); 
 		}
 	});

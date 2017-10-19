@@ -7,11 +7,13 @@
 					<Text text="{dataModel>/value2}"/>
 					<Button text="{i18n>btnText1}" tooltip="{model: 'i18n' , path: 'ttButton1'}" press="onButton"/>
 					<Button text="{i18n>btnText2}" tooltip="{model: 'i18n' , path: 'ttButton2'}" press="onButton"/>
-					<List headerText="{i18n>headerText}" items="{ model: 'flugkundenModel', path: '/d/results' }">
+					<List headerText="{i18n>headerText}" growing="true" growingScrollToLoad="true" items="{model: 'flugkundenModel', path: '/FlugkundenSet',
+					sorter: {path: 'Custname', descending: false 
+					} 
+					}" >
 						<items>
-						<StandardListItem
-						    title="{flugkundenModel>Custname}" 
-							description="{flugkundenModel>City} - {flugkundenModel>Street}" />
+							<StandardListItem title="{flugkundenModel>Custname}"
+								description="{flugkundenModel>City} - {flugkundenModel>Street} - {flugkundenModel>Countr} "/>
 						</items>
 					</List>
 				</content>
