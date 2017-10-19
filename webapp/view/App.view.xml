@@ -1,13 +1,12 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="controller.App" xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="de.Test_OSZ.schul02.controller.App" xmlns="sap.m">
 	<App>
 		<pages>
 			<Page title="Meine erste App">
 				<content><Slider id="Slider1" value="{dataModel>/value1}" change="onSliderChange"/>
-					<Text text="{path: 'dataModel>/value1'}"/>
-					<Slider id="Slider2" value="{model: 'dataModel', path: '/value2'}" change="onSliderChange"/>
+					<Text text="{path: 'dataModel>/value1'}"/><Slider id="Slider2" value="{model: 'dataModel', path: '/value2'}" change="onSliderChange"/>
 					<Text text="{dataModel>/value2}"/>
-					<Button text="Blödsinn" tooltip="Tooltip Blödsinn"/>
-					<Button text="Kein Blödsinn" tooltip="Tooltip Blödsinn"/>
+					<Button text="Blödsinn" tooltip="Tooltip Blödsinn" press="onButton"/>
+					<Button text="Kein Blödsinn" tooltip="Tooltip Blödsinn" press="onButton"/>
 				</content>
 			</Page>
 		</pages>

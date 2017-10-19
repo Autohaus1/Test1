@@ -1,4 +1,4 @@
-sap.ui.controller("controller.App", {
+sap.ui.controller("de.Test_OSZ.schul02.controller.App", {
 
 	/**
 	 * Called     when a controller is instantiated and its View controls (if available) are already created.
@@ -47,6 +47,7 @@ sap.ui.controller("controller.App", {
 			"Verschoben auf " +
 			oEvent.getSource().getValue() +
 			" verschoben");
-	}
-
+	},
+    onButton: function(oEvent) {
+		alert("Button gedrückt");}
 });
