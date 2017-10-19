@@ -45,26 +45,23 @@ sap.ui.jsview("view.App", {
 			text: "nicht Blödsinn"
 		});
 
-		var oVLayout = new sap.m.VBox({
-			width: "90rem",
-			items: [
+		var oPage = new sap.m.Page({
+			title: "Title",
+			content: [
 				oSlider1,
 				oText1,
 				oSlider2,
 				oText2,
 				oButton,
 				oButton2
-
-			]
-
-		});
-
-		return new sap.m.Page({
-			title: "Meine 1. APP",
-			content: [oVLayout
-
 			]
 		});
+		// Page 
+		return new sap.m.App({
+			pages: [
+				oPage
+			]
+});
 	}
 
 });
