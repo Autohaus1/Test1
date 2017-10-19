@@ -33,6 +33,9 @@ sap.ui.define([
 
 			this.setModel(oModel, "dataModel"); // Model einbinden  dadurch Model in der App überall verfügbar
 
+
+           var oFlugkundenModel = new sap.ui.model.json.JSONModel("model/flugkunden.json");
+           this.setModel(oFlugkundenModel, "flugkundenModel"); 
 		}
 	});
 });

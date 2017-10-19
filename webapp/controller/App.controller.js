@@ -49,5 +49,5 @@ sap.ui.controller("de.Test_OSZ.schul02.controller.App", {
 			" verschoben");
 	},
     onButton: function(oEvent) {
-		alert("Button gedrückt");}
+		alert("{i18n>pressButton}");}
 });
