@@ -22,7 +22,7 @@ sap.ui.define([
 						viewPath: "de.Test_OSZ.schul02.view",
 						controlId: "app",
 						controlAggregation: "pages",  /* was ausgestauscht werden soll*/
-						transition: "slide",
+						transition: "fade",
 						async: true
 					},   
 					routes: [
