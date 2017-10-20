@@ -14,7 +14,44 @@ sap.ui.define([
 			rootView: {
 				viewName: "de.Test_OSZ.schul02.view.App",
 				type: "XML"
-			}
+			},
+			routing: {
+					config: {
+						routerClass: sap.m.routing.Router,
+						viewType: "XML",
+						viewPath: "de.Test_OSZ.schul02.view",
+						controlId: "app",
+						controlAggregation: "pages",  /* was ausgestauscht werden soll*/
+						transition: "slide",
+						async: true
+					},   
+					routes: [
+						{
+							pattern: "",
+							name: "initial",
+							target: [
+								"list"
+							]					
+						},
+						{
+							pattern: "{customerId}",
+							name: "customerDetails",
+							target: [
+								"details"
+							]
+						}
+					],
+					targets: {
+						list: {
+							viewName: "List",
+							viewLevel: 1
+						},
+						details: {
+							viewName: "Customer",
+							viewLevel: 2
+						}
+					}
+				}
 		},
 		init: function() {
 			UIComponent.prototype.init.apply(this, arguments);
@@ -43,6 +80,7 @@ sap.ui.define([
            	
            });
            this.setModel(oFlugkundenModel, "flugkundenModel"); 
+           this.getRouter().initialize();
 		}
 	});
 });

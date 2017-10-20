@@ -1,0 +1,20 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="de.Test_OSZ.schul02.controller.List" xmlns="sap.m">
+
+			<Page title="{i18n>title}">
+				<content><Slider id="Slider1" value="{dataModel>/value1}" change="onSliderChange"/>
+					<Text text="{path: 'dataModel>/value1'}"/><Slider id="Slider2" value="{model: 'dataModel', path: '/value2'}" change="onSliderChange"/>
+					<Text text="{dataModel>/value2}"/>
+					<Button text="{i18n>btnText1}" tooltip="{model: 'i18n' , path: 'ttButton1'}" press="onButton"/>
+					<Button text="{i18n>btnText2}" tooltip="{model: 'i18n' , path: 'ttButton2'}" press="onButton"/>
+					<List headerText="{i18n>headerText}" growing="true" growingScrollToLoad="true"
+						items="{model: 'flugkundenModel', path: '/FlugkundenSet', sorter: {path: 'Custname', descending: false } }">
+						<items>
+							<StandardListItem title="{flugkundenModel>Custname}" type="Navigation" 
+							press="onItemPress"
+							description="{flugkundenModel>City} - {flugkundenModel>Street} - {flugkundenModel>Countr} "/>
+						</items>
+					</List>
+				</content>
+			</Page>
+	
+</mvc:View>
